@@ -1,0 +1,59 @@
+/* =================================
+   RESPONSIVE STYLES
+   ================================= */
+
+/* Large Devices (Desktop) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    .logo {
+        margin: 10px 0;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .destination-card {
+        max-width: 400px;
+        margin: 20px auto;
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-brand img {
+        max-width: 120px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Very Small Phones */
+@media (max-width: 375px) {
+    body {
+        font-size: 13px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
