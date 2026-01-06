@@ -1,3 +1,8 @@
+/* =================================
+   BASE STYLES - DESKTOP
+   No media queries in this file
+   ================================= */
+
 * {
     padding: 0;
     margin: 0;
@@ -74,11 +79,9 @@ body {
     opacity: 0;
 }
 
-/*-----------------------------------------   Header --------------------------------------*/
-
-/* =================================
-   HEADER - MOBILE FIXED
-   ================================= */
+/*-----------------------------------------   
+   HEADER 
+   -----------------------------------------*/
 
 .top-area {
     position: absolute;
@@ -173,223 +176,10 @@ body {
     margin-top: 10px;
 }
 
+/*-----------------------------------------   
+   HERO SECTION 
+   -----------------------------------------*/
 
-
-@media screen and (max-width: 991px) {
-    /* Keep desktop layout until 991px */
-    .main-menu .navbar-nav {
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    /* MOBILE FIXES */
-
-    .top-area {
-        background: rgba(77, 78, 84, 1);
-        padding: 10px 0;
-        position: fixed;
-        width: 100%;
-        z-index: 1001;
-        top: 0;
-    }
-
-    .header-area {
-        padding: 0;
-        position: relative;
-    }
-
-    /* Logo and Hamburger Row */
-    .header-area .row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0;
-    }
-
-    .col-sm-2,
-    .col-sm-10 {
-        width: auto;
-        flex: 0 0 auto;
-        padding: 0;
-    }
-
-    /* ✅ Logo Container */
-    .col-sm-2 {
-        position: relative;
-        z-index: 1003;
-    }
-
-    .logo {
-        margin: 0;
-        padding: 5px 0;
-    }
-
-    .logo img {
-        max-width: 120px;
-        height: auto;
-        display: block;
-    }
-
-    /* ✅ Navigation Container */
-    .col-sm-10 {
-        position: static;  /* ✅ IMPORTANT for absolute positioning */
-    }
-
-    /* ✅ Hamburger Icon */
-    .navbar-toggler {
-        margin: 0;
-        padding: 8px 12px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
-        position: relative;
-        z-index: 1003;
-    }
-
-    .navbar-toggler .fa-bars {
-        font-size: 20px;
-        color: #fff;
-    }
-
-    /* ✅ FIX: Full-width centered dropdown */
-    .navbar-collapse {
-        position: fixed;  /* ✅ Fixed to viewport */
-        top: 60px;  /* ✅ Below header */
-        left: 0;
-        right: 0;
-        width: 100vw;  /* ✅ Full viewport width */
-        background: rgba(77, 78, 84, 0.98);  /* ✅ Solid background */
-        backdrop-filter: blur(10px);  /* ✅ Blur effect */
-        margin: 0;
-        padding: 40px 20px;
-        border-radius: 0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        max-height: calc(100vh - 60px);  /* ✅ Don't exceed screen */
-        overflow-y: auto;  /* ✅ Scroll if needed */
-    }
-
-    /* ✅ FIX: Centered menu items */
-    .main-menu .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .main-menu .nav-item {
-        width: auto;
-        margin: 0 0 25px 0;
-        padding: 0;
-        border-bottom: none;
-        text-align: center;
-    }
-
-    .main-menu .nav-item:last-child {
-        margin-bottom: 0;
-    }
-
-    .main-menu .nav-link {
-        display: inline-block;
-        width: auto;
-        padding: 12px 30px !important;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.9) !important;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-
-    .main-menu .nav-link:hover,
-    .main-menu .nav-item.active .nav-link {
-        color: #09C6AB !important;
-        background: rgba(9, 198, 171, 0.1);
-        transform: translateY(-2px);
-    }
-
-    /* ✅ FIX: Centered login button */
-    .login-btn {
-        width: auto;
-        padding: 12px 50px;
-        text-align: center;
-        margin: 20px auto 0;
-        display: block;
-        font-size: 16px;
-    }
-
-    /* ✅ Border */
-    .home-border {
-        display: none;  /* ✅ Hide on mobile */
-    }
-
-    /* ✅ Add padding to hero */
-    .hero-section {
-        padding-top: 80px;
-        min-height: 100vh;  /* ✅ Full screen height */
-    }
-
-    .hero-video-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;  /* ✅ Fill parent */
-        background: url('../images/hero-mobile.jpg') no-repeat center center;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    .hero-video {
-        display: none;  /* Hide video */
-    }
-
-    .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        padding-top: 50px;
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-    .logo img {
-        max-width: 100px;
-    }
-
-    .navbar-toggler {
-        padding: 6px 10px;
-    }
-
-    .navbar-collapse {
-        top: 55px;
-        padding: 30px 15px;
-    }
-
-    .main-menu .nav-link {
-        font-size: 16px;
-        padding: 10px 25px !important;
-    }
-
-    .login-btn {
-        padding: 10px 40px;
-        font-size: 14px;
-    }
-}
-
-/*------------------------------Hero Section -----------------------------------------------*/
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -503,57 +293,129 @@ body {
     }
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .hero-section {
-        min-height: 80vh;
-        padding: 120px 0 80px;
+/* =================================
+   ABOUT SECTION
+   ================================= */
+
+.abouts {
+    background: url(../images/abtbg.jpg) no-repeat center top scroll;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.abouts_content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.single_abouts_text {
+    padding: 20px;
+}
+
+.single_abouts_text.text-center {
+    text-align: center;
+}
+
+.single_abouts_text img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.single_abouts_text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #09C6AB;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.single_abouts_text h3 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.single_abouts_text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.single_abouts_text .btn-primary {
+    background-color: #09C6AB;
+    color: #fff;
+    border: 2px solid #09C6AB;
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.single_abouts_text .btn-primary:hover {
+    background: transparent;
+    color: #09C6AB;
+    border: 2px solid #09C6AB;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(9, 198, 171, 0.3);
+}
+
+/* Animation classes (if using WOW.js) */
+.wow {
+    visibility: hidden;
+}
+
+.animated {
+    visibility: visible;
+}
+
+/* Slide animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
     }
 
-    .hero-title {
-        font-size: 36px;
-        margin-bottom: 15px;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-
-    .btn-explore {
-        padding: 14px 40px;
-        font-size: 14px;
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .hero-section {
-        padding: 100px 0 60px;
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
     }
 
-    .hero-title {
-        font-size: 28px;
-    }
-
-    .hero-subtitle {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    .btn-explore {
-        padding: 12px 30px;
-        width: 100%;
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
-/* Pause video on mobile to save bandwidth */
-@media screen and (max-width: 768px) {
-    .hero-video {
-        display: none;
-    }
+.slideInLeft {
+    animation: slideInLeft 1s ease-out;
+}
 
-    .hero-video-wrapper {
-        background: url('../images/hero-fallback.jpg') no-repeat center center;
-        background-size: cover;
-    }
+.slideInRight {
+    animation: slideInRight 1s ease-out;
 }
