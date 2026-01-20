@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know More - Discover Cambodia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <!--Navigation-->
+    <header class="top-area">
+        <div class="header-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-2">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo.png" alt="KnowMore">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10">
+                        <nav class="navbar navbar-expand-lg main-menu">
+                            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto align-items-center">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="destination.html">Destination</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="btn login-btn">Login</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="home-border"></div>
+            </div>
+        </div>
+    </header>
+
+    <!--Hero Section-->
+    <section id="home" class="hero-section">
+        <!-- Video Background -->
+        <div class="hero-video-wrapper">
+            <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-fallback.jpg">
+                <source src="assets/videos/destination-hero-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Content on top of video -->
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hero-text text-center">
+                        <h2 class="hero-title">
+                            Explore Cambodia
+                        </h2>
+                        <p class="hero-subtitle">
+                            Discover amazing destinations, experiences, and hidden gems
+                        </p>
+
+                        <!-- Search Bar -->
+                        <div class="search-container">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <input type="text" class="search-input"
+                                placeholder="Search destinations, activities, regions..." />
+                            <button class="search-button">
+                                SEARCH
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!--End Hero Section-->
+
+    <!--Filter Section-->
+    <div class="filter-container">
+        <div class="filter-header">
+            <h2 class="filter-title">
+                <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                Filters
+            </h2>
+            <div class="view-toggle">
+                <button class="view-btn active" id="gridView">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </button>
+                <button class="view-btn" id="listView">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                    </svg>
+                </button>
+                <button class="view-btn" id="mapView">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                        <line x1="8" y1="2" x2="8" y2="18"></line>
+                        <line x1="16" y1="6" x2="16" y2="22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="filter-container">
+            <!-- Region Filter -->
+            <label for="region-filter">Select Region</label>
+            <select id="region-filter" name="regions" multiple>
+                <option value="banteay-meanchey">Banteay Meanchey</option>
+                <option value="battambang">Battambang</option>
+                <option value="kampong-cham">Kampong Cham</option>
+                <option value="kampong-chhnang">Kampong Chhnang</option>
+                <option value="kampong-speu">Kampong Speu</option>
+                <option value="kampong-thom">Kampong Thom</option>
+                <option value="kampot">Kampot</option>
+                <option value="kandal">Kandal</option>
+                <option value="kep">Kep</option>
+                <option value="kratie">Kratie</option>
+                <option value="mondulkiri">Mondulkiri</option>
+                <option value="oddar-meanchey">Oddar Meanchey</option>
+                <option value="pailin">Pailin</option>
+                <option value="phnom-penh (capital city)">Phnom Penh (capital city)</option>
+                <option value="preah-vihear">Preah Vihear</option>
+                <option value="prey-veng">Prey Veng</option>
+                <option value="pursat">Pursat</option>
+                <option value="ratanakiri">Ratanakiri</option>
+                <option value="siem-reap">Siem Reap</option>
+                <option value="preah-sihanouk">Preah Sihanouk (Sihanoukville)</option>
+                <option value="stung-treng">Stung Treng</option>
+                <option value="svay-rieng">Svay Rieng</option>
+                <option value="takéo">Takéo</option>
+                <option value="koh-kong">Koh Kong</option>
+                <option value="tboung-khmum">Tboung Khmum</option>
+            </select>
+
+            <!-- Place Type Filter-->
+            <label for="place-filter">Select Place</label>
+            <select id="place-filter" name="places" multiple>
+                <option value="hidden-temple">Hidden temple</option>
+                <option value="waterfall">Waterfall</option>
+                <option value="mountain">Mountain</option>
+                <option value="forest">Forest</option>
+                <option value="quiet-beach">Quiet beach</option>
+                <option value="island">Island</option>
+                <option value="local-life">local life</option>
+                <option value="cultural-experience">Cultural experience</option>
+                <option value="local-market">Local market</option>
+                <option value="cave">Cave</option>
+                <option value="wildlife">Wildlife</option>
+                <option value="forgotten-site">Forgotten site</option>
+            </select>
+
+            <!-- Accessibility Filter -->
+            <label for="accessibility-filter">Select Accessibility</label>
+            <select id="accessibility-filter" name="accessibilities" multiple>
+                <option value="very-easy">Very easy (car access)</option>
+                <option value="easy">Easy (short walk)</option>
+                <option value="moderate">Moderate (motorbike / dirt road)</option>
+                <option value="hard">Hard (hike required)</option>
+                <option value="very-hard">Very hard (guide needed)</option>
+                <option value="boat-access">Boat access</option>
+                <option value="seasonal-access-only">Seasonal access only</option>
+            </select>
+
+            <!-- Best Visiting Time Filter -->
+            <form>
+                <label for="visiting-time-filter">Select Best Visiting Time</label>
+                <select id="visiting-time-filter" name="visitingTime"></select>
+
+            </form>
+
+            <!-- Include the Multi Select JS class -->
+            <script src="MultiSelect.js"></script>
+            <script>
+                // Initialize the Dynamic Select
+                const visitingTime = new MultiSelect('#visiting-time-filter', {
+                    data: [
+                        {
+                            value: 'timeOfDay',
+                            html: '<strong>Time of day</strong>'
+                        },
+                        {
+                            value: 'opt1',
+                            text: 'Sunrise'
+                        },
+                        {
+                            value: 'opt2',
+                            text: 'Morning',
+                        },
+                        {
+                            value: 'opt3',
+                            text: 'Afternoon'
+                        },
+                        {
+                            value: 'opt4',
+                            text: 'Sunset'
+                        },
+                        {
+                            value: 'opt5',
+                            text: 'Evening'
+                        },
+                        {
+                            value: 'Season',
+                            html: '<strong>Season</strong>'
+                        },
+                        {
+                            value: 'opt6',
+                            text: 'Dry season'
+                        },
+                        {
+                            value: 'opt7',
+                            text: 'Rainy season'
+                        },
+                        {
+                            value: 'opt8',
+                            text: 'Year-round'
+                        },
+                    ],
+                    placeholder: 'Select Visiting Time',
+                    search: false,        // No search bar
+                    selectAll: false,     // No "Select all" option
+                    listAll: false,
+                    onChange: function (value, text, element) {
+                        console.log('Change:', value, text, element);
+                    }
+                });
+
+                // Override the _updateHeader method
+                visitingTime._updateHeader = function () {
+                    this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+
+                    if (this.selectedValues.length > 0) {
+                        if (this.selectedValues.length <= 4) {
+                            this.selectedItems.forEach(item => {
+                                const el = document.createElement('span');
+                                el.className = 'multi-select-header-option';
+                                el.dataset.value = item.value;
+                                el.innerHTML = item.text;
+                                this.element.querySelector('.multi-select-header').prepend(el);
+                            });
+                        } else {
+                            this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                        }
+                    } else {
+                        this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
+                    }
+
+                    if (this.options.max) {
+                        this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
+                    }
+                };
+            </script>
+        </div>
+
+
+        <div class="filter-actions">
+            <button class="btn-clear">Clear Filters</button>
+            <button class="btn-apply">Apply Filters</button>
+        </div>
+    </div>
+
+    <!-- Load MultiSelect.js once -->
+    <script src="MultiSelect.js"></script>
+
+    <script>
+        // ========== REGION FILTER ==========
+        const regionFilter = new MultiSelect('#region-filter', {
+            placeholder: 'Select regions',
+            search: false,
+            selectAll: true,
+            listAll: false,
+            onChange: function (value, text, element) {
+                console.log('Selected regions:', this.selectedValues);
+            }
+        });
+
+        regionFilter._updateHeader = function () {
+            this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+
+            if (this.selectedValues.length > 0) {
+                if (this.selectedValues.length <= 4) {
+                    this.selectedItems.forEach(item => {
+                        const el = document.createElement('span');
+                        el.className = 'multi-select-header-option';
+                        el.dataset.value = item.value;
+                        el.innerHTML = item.text;
+                        this.element.querySelector('.multi-select-header').prepend(el);
+                    });
+                } else {
+                    this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                }
+            } else {
+                this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
+            }
+
+            if (this.options.max) {
+                this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
+            }
+        };
+
+        // ========== PLACE TYPE FILTER ==========
+        const placeFilter = new MultiSelect('#place-filter', {
+            placeholder: 'Select places',
+            search: false,
+            selectAll: true,
+            listAll: false,
+            onChange: function (value, text, element) {
+                console.log('Selected places:', this.selectedValues);
+            }
+        });
+
+        placeFilter._updateHeader = function () {
+            this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+
+            if (this.selectedValues.length > 0) {
+                if (this.selectedValues.length <= 4) {
+                    this.selectedItems.forEach(item => {
+                        const el = document.createElement('span');
+                        el.className = 'multi-select-header-option';
+                        el.dataset.value = item.value;
+                        el.innerHTML = item.text;
+                        this.element.querySelector('.multi-select-header').prepend(el);
+                    });
+                } else {
+                    this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                }
+            } else {
+                this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
+            }
+
+            if (this.options.max) {
+                this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
+            }
+        };
+
+        // ========== ACCESSIBILITY FILTER ==========
+        const accessibilityFilter = new MultiSelect('#accessibility-filter', {
+            placeholder: 'Select accessibility',
+            search: false,
+            selectAll: true,
+            listAll: false,
+            onChange: function (value, text, element) {
+                console.log('Selected accessibilities:', this.selectedValues);
+            }
+        });
+
+        accessibilityFilter._updateHeader = function () {
+            this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+
+            if (this.selectedValues.length > 0) {
+                if (this.selectedValues.length <= 4) {
+                    this.selectedItems.forEach(item => {
+                        const el = document.createElement('span');
+                        el.className = 'multi-select-header-option';
+                        el.dataset.value = item.value;
+                        el.innerHTML = item.text;
+                        this.element.querySelector('.multi-select-header').prepend(el);
+                    });
+                } else {
+                    this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                }
+            } else {
+                this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
+            }
+
+            if (this.options.max) {
+                this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
+            }
+        };
+    </script>
+
+</body>
+
+</html>

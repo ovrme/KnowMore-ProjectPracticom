@@ -139,12 +139,30 @@ body {
     font-size: 15px;
     padding: 8px 15px !important;
     color: rgba(255, 255, 255, 0.7) !important;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .main-menu .nav-link:hover,
 .main-menu .nav-item.active .nav-link {
-    color: rgba(255, 255, 255, 1) !important;
+    color: #09C6AB !important;
+}
+
+.main-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background: #09C6AB;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.main-menu .nav-link:hover::after,
+.main-menu .nav-item.active .nav-link::after {
+    transform: scaleX(1);
 }
 
 /* Login Button */
@@ -582,7 +600,7 @@ body {
     background-size: cover;
     width: 100%;
     overflow: hidden;
-    padding: 60 px 0;
+    padding: 100px 0;
 }
 
 .journey-section::before {
@@ -663,19 +681,17 @@ body {
 .amazing-banner {
     width: 100%;
     padding: 0;
-    margin: 100px 0;
+    margin: 0;
 }
 
 .banner {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-    ), url(../images/banner-bg.jpg) no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(../images/banner-bg.jpg) no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     padding: 120px 0;
     position: relative;
 }
@@ -687,11 +703,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(9, 198, 171, 0.2) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(9, 198, 171, 0.2) 0%,
+            rgba(0, 0, 0, 0.3) 100%);
     z-index: 0;
 }
 
@@ -720,31 +734,34 @@ body {
 .banner-underline {
     width: 200px;
     height: 4px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        #09C6AB 50%,
-        transparent 100%
-    );
+    background: linear-gradient(90deg,
+            transparent 0%,
+            #09C6AB 50%,
+            transparent 100%);
     margin: 0 auto 30px;
     border-radius: 2px;
 }
 
 /* Alternative: Animated underline */
 .banner-underline.animated {
-    background: linear-gradient(
-        90deg,
-        #09C6AB 0%,
-        #fff 50%,
-        #09C6AB 100%
-    );
+    background: linear-gradient(90deg,
+            #09C6AB 0%,
+            #fff 50%,
+            #09C6AB 100%);
     background-size: 200% 100%;
     animation: shimmer 3s infinite;
 }
 
 @keyframes shimmer {
-    0%, 100% { background-position: 0% 0%; }
-    50% { background-position: 100% 0%; }
+
+    0%,
+    100% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
 }
 
 .banner-subtext {
@@ -775,4 +792,226 @@ body {
     color: #fff;
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* =================================
+   FOOTER SECTION
+   ================================= */
+
+.footer {
+    background: rgba(77, 78, 84, 0.95);
+    padding: 80px 0 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 40px;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box .logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-box .logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.footer-box p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+}
+
+.footer-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-box a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-box a:hover {
+    color: #09C6AB;
+    transform: translateX(5px);
+}
+
+/* Social Icons */
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    background: #09C6AB;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Poppins', sans-serif;
+}
+
+/*==============Search Bar ==============*/
+/* Container */
+.search-container {
+    max-width: 48rem;
+    /* 3xl = 768px */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 2px solid #9ca3af;
+    /* gray-400 */
+    border-radius: 50px;
+    /* Changed from 0.5rem to match button style */
+    padding: 0.5rem;
+    /* 8px */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Search Icon */
+.search-icon {
+    margin-left: 0.75rem;
+    /* 12px */
+    color: #6b7280;
+    /* gray-500 */
+    width: 24px;
+    height: 24px;
+}
+
+/* Input Field */
+.search-input {
+    flex: 1;
+    padding-left: 1rem;
+    /* 16px */
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    /* 12px */
+    padding-bottom: 0.75rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+/* =================================
+   UNIFIED BUTTON STYLES
+   All buttons now use the Explore Cambodia style
+   ================================= */
+
+/* Base button style - applies to all buttons */
+.btn-explore,
+.login-btn,
+.search-button,
+.single_abouts_text .btn-primary,
+.banner .btn-explore {
+    background: #09C6AB;
+    border: 2px solid #09C6AB;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(9, 198, 171, 0.4);
+    display: inline-block;
+}
+
+/* Hover state for all buttons */
+.btn-explore:hover,
+.login-btn:hover,
+.search-button:hover,
+.single_abouts_text .btn-primary:hover,
+.banner .btn-explore:hover {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.search-button:hover {
+    background: transparent;
+    border: 2px solid #09C6AB;
+    color: #09C6AB;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Active state (optional - for click feedback) */
+.btn-explore:active,
+.login-btn:active,
+.search-button:active,
+.single_abouts_text .btn-primary:active,
+.banner .btn-explore:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(9, 198, 171, 0.3);
+}
+
+/* Size variations (if needed) */
+.search-button {
+    padding: 12px 30px;
+    font-size: 14px;
+}
+
+.login-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+.banner .btn-explore {
+    padding: 18px 60px;
+    font-size: 18px;
 }
