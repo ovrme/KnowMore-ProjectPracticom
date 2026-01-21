@@ -101,313 +101,833 @@
         </div>
     </section> <!--End Hero Section-->
 
-    <!--Filter Section-->
-    <div class="filter-container">
-        <div class="filter-header">
-            <h2 class="filter-title">
-                <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                </svg>
-                Filters
-            </h2>
-            <div class="view-toggle">
-                <button class="view-btn active" id="gridView">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="3" width="7" height="7"></rect>
-                        <rect x="14" y="3" width="7" height="7"></rect>
-                        <rect x="14" y="14" width="7" height="7"></rect>
-                        <rect x="3" y="14" width="7" height="7"></rect>
+    <section class="filter-section"> <!--Filter Section-->
+        <div class="filter-container">
+            <!-- Top Row: Title and View Icons -->
+            <div class="header">
+                <h2 class="filter-title">
+                    <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                     </svg>
+                    Filters
+                </h2>
+
+                <div class="view-buttons">
+                    <button class="view-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="7" height="7" stroke-width="2"></rect>
+                            <rect x="14" y="3" width="7" height="7" stroke-width="2"></rect>
+                            <rect x="14" y="14" width="7" height="7" stroke-width="2"></rect>
+                            <rect x="3" y="14" width="7" height="7" stroke-width="2"></rect>
+                        </svg>
+                    </button>
+                    <button class="view-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <line x1="8" y1="6" x2="21" y2="6" stroke-width="2"></line>
+                            <line x1="8" y1="12" x2="21" y2="12" stroke-width="2"></line>
+                            <line x1="8" y1="18" x2="21" y2="18" stroke-width="2"></line>
+                            <circle cx="3" cy="6" r="1.5" fill="currentColor"></circle>
+                            <circle cx="3" cy="12" r="1.5" fill="currentColor"></circle>
+                            <circle cx="3" cy="18" r="1.5" fill="currentColor"></circle>
+                        </svg>
+                    </button>
+                    <button class="view-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                                stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Close overlay -->
+            <div class="close-overlay" id="closeOverlay"></div>
+
+            <!-- Filters Container - 2 per row -->
+            <div class="filters-container">
+                <!-- Region Filter -->
+                <div class="filter-wrapper" data-filter="region">
+                    <button class="filter-btn" data-dropdown="region">
+                        <span>Region</span>
+                        <svg class="filter-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div class="filter-dropdown-panel" id="regionDropdown">
+                        <div class="dropdown-header">
+                            <div class="dropdown-header-left">
+                                <span><span class="selected-count">0</span> Selected</span>
+                                <button class="select-all-btn" data-select-all="region">Select All</button>
+                            </div>
+                            <button class="reset-btn" data-reset="region">Reset</button>
+                        </div>
+                        <div class="dropdown-content">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Banteay Meanchey</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Battambang</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kampong Cham</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kampong Chhnang</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kampong Speu</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kampong Thom</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kampot</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kandal</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kep</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Kratie</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Mondulkiri</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Oddar Meanchey</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Pailin</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Phnom Penh (capital city)</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Preah Vihear</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Prey Veng</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Pursat</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Ratanakiri</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Siem Reap</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Preah Sihanouk (Sihanoukville)</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Stung Treng</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Svay Rieng</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Takéo</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Koh Kong</span>
+                            </label><label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="region">
+                                <span>Tboung Khmum</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Place Type Filter -->
+                <div class="filter-wrapper" data-filter="place">
+                    <button class="filter-btn" data-dropdown="place">
+                        <span>Place Type</span>
+                        <svg class="filter-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div class="filter-dropdown-panel" id="placeDropdown">
+                        <div class="dropdown-header">
+                            <div class="dropdown-header-left">
+                                <span><span class="selected-count">0</span> Selected</span>
+                                <button class="select-all-btn" data-select-all="place">Select All</button>
+                            </div>
+                            <button class="reset-btn" data-reset="place">Reset</button>
+                        </div>
+                        <div class="dropdown-content">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Hidden temple</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Waterfall</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Mountain</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Forest</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Quiet beach</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Island</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Cave</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="place">
+                                <span>Wildlife</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility Filter -->
+                <div class="filter-wrapper" data-filter="accessibility">
+                    <button class="filter-btn" data-dropdown="accessibility">
+                        <span>Accessibility</span>
+                        <svg class="filter-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div class="filter-dropdown-panel" id="accessibilityDropdown">
+                        <div class="dropdown-header">
+                            <div class="dropdown-header-left">
+                                <span><span class="selected-count">0</span> Selected</span>
+                                <button class="select-all-btn" data-select-all="accessibility">Select All</button>
+                            </div>
+                            <button class="reset-btn" data-reset="accessibility">Reset</button>
+                        </div>
+                        <div class="dropdown-content">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="accessibility">
+                                <span>Very easy (car access)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="accessibility">
+                                <span>Easy (short walk)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="accessibility">
+                                <span>Moderate (motorbike / dirt road)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="accessibility">
+                                <span>Hard (hike required)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="accessibility">
+                                <span>Very hard (guide needed)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Visiting Time Filter -->
+                <div class="filter-wrapper" data-filter="time">
+                    <button class="filter-btn" data-dropdown="time">
+                        <span>Best Visiting Time</span>
+                        <svg class="filter-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div class="filter-dropdown-panel" id="timeDropdown">
+                        <div class="dropdown-header">
+                            <div class="dropdown-header-left">
+                                <span><span class="selected-count">0</span> Selected</span>
+                                <button class="select-all-btn" data-select-all="time">Select All</button>
+                            </div>
+                            <button class="reset-btn" data-reset="time">Reset</button>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="section-header">Time of day</div>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Sunrise</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Morning</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Afternoon</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Sunset</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Evening</span>
+                            </label>
+                            <div class="section-header">Season</div>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Dry season</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Rainy season</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-filter-type="time">
+                                <span>Year-round</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="action-btn clear-btn" id="clearAll">
+                    Clear Filters
                 </button>
-                <button class="view-btn" id="listView">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <line x1="8" y1="6" x2="21" y2="6"></line>
-                        <line x1="8" y1="12" x2="21" y2="12"></line>
-                        <line x1="8" y1="18" x2="21" y2="18"></line>
-                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                    </svg>
-                </button>
-                <button class="view-btn" id="mapView">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-                        <line x1="8" y1="2" x2="8" y2="18"></line>
-                        <line x1="16" y1="6" x2="16" y2="22"></line>
-                    </svg>
+                <button class="action-btn apply-btn" id="applyFilters">
+                    Apply Filters
                 </button>
             </div>
         </div>
+    </section>
+    <!-- End Filter Section!-->
 
-        <div class="filter-container">
-            <!-- Region Filter -->
-            <label for="region-filter">Select Region</label>
-            <select id="region-filter" name="regions" multiple>
-                <option value="banteay-meanchey">Banteay Meanchey</option>
-                <option value="battambang">Battambang</option>
-                <option value="kampong-cham">Kampong Cham</option>
-                <option value="kampong-chhnang">Kampong Chhnang</option>
-                <option value="kampong-speu">Kampong Speu</option>
-                <option value="kampong-thom">Kampong Thom</option>
-                <option value="kampot">Kampot</option>
-                <option value="kandal">Kandal</option>
-                <option value="kep">Kep</option>
-                <option value="kratie">Kratie</option>
-                <option value="mondulkiri">Mondulkiri</option>
-                <option value="oddar-meanchey">Oddar Meanchey</option>
-                <option value="pailin">Pailin</option>
-                <option value="phnom-penh (capital city)">Phnom Penh (capital city)</option>
-                <option value="preah-vihear">Preah Vihear</option>
-                <option value="prey-veng">Prey Veng</option>
-                <option value="pursat">Pursat</option>
-                <option value="ratanakiri">Ratanakiri</option>
-                <option value="siem-reap">Siem Reap</option>
-                <option value="preah-sihanouk">Preah Sihanouk (Sihanoukville)</option>
-                <option value="stung-treng">Stung Treng</option>
-                <option value="svay-rieng">Svay Rieng</option>
-                <option value="takéo">Takéo</option>
-                <option value="koh-kong">Koh Kong</option>
-                <option value="tboung-khmum">Tboung Khmum</option>
-            </select>
+    <section class="destination-card" id="destination-card">
+        <h2>HIDDEN GEMS - LEAST VISITED PLACES</h2>
+        <div class="card-main-container">
+            <!--Card 1-->
+            <div class="place-card">
+                <div class="img-box">
+                    <img src="assets/images/beach.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="img-box-text">
+                        <h2>####</h2>
+                        <p class="place-types">
+                            <span>Temple</span>
+                            <span>Moderate</span>
+                            <span>Sunrise</span>
+                        </p>
+                    </div>
+                </div>
 
-            <!-- Place Type Filter-->
-            <label for="place-filter">Select Place</label>
-            <select id="place-filter" name="places" multiple>
-                <option value="hidden-temple">Hidden temple</option>
-                <option value="waterfall">Waterfall</option>
-                <option value="mountain">Mountain</option>
-                <option value="forest">Forest</option>
-                <option value="quiet-beach">Quiet beach</option>
-                <option value="island">Island</option>
-                <option value="local-life">local life</option>
-                <option value="cultural-experience">Cultural experience</option>
-                <option value="local-market">Local market</option>
-                <option value="cave">Cave</option>
-                <option value="wildlife">Wildlife</option>
-                <option value="forgotten-site">Forgotten site</option>
-            </select>
+                <div class="place-card-text">
+                    <h1>#####</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus corporis quisquam hic
+                        sed odio non obcaecati adipisci nobis error, voluptatibus laboriosam incidunt? Eaque velit
+                        repudiandae cum cumque! Minus, recusandae.</p>
+                    <div class="tour-meta">
+                        <span class="rating">
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                        </span>
+                        <button>View Detial</button>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Accessibility Filter -->
-            <label for="accessibility-filter">Select Accessibility</label>
-            <select id="accessibility-filter" name="accessibilities" multiple>
-                <option value="very-easy">Very easy (car access)</option>
-                <option value="easy">Easy (short walk)</option>
-                <option value="moderate">Moderate (motorbike / dirt road)</option>
-                <option value="hard">Hard (hike required)</option>
-                <option value="very-hard">Very hard (guide needed)</option>
-                <option value="boat-access">Boat access</option>
-                <option value="seasonal-access-only">Seasonal access only</option>
-            </select>
+            <!--Card 1-->
+            <div class="place-card">
+                <div class="img-box">
+                    <img src="assets/images/beach.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="img-box-text">
+                        <h2>####</h2>
+                        <p class="place-types">
+                            <span>Temple</span>
+                            <span>Moderate</span>
+                            <span>Sunrise</span>
+                        </p>
+                    </div>
+                </div>
 
-            <!-- Best Visiting Time Filter -->
-            <form>
-                <label for="visiting-time-filter">Select Best Visiting Time</label>
-                <select id="visiting-time-filter" name="visitingTime"></select>
+                <div class="place-card-text">
+                    <h1>#####</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus corporis quisquam hic
+                        sed odio non obcaecati adipisci nobis error, voluptatibus laboriosam incidunt? Eaque velit
+                        repudiandae cum cumque! Minus, recusandae.</p>
+                    <div class="tour-meta">
+                        <span class="rating">
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                        </span>
+                        <button>View Detial</button>
+                    </div>
+                </div>
+            </div>
 
-            </form>
+            <!--Card 1-->
+            <div class="place-card">
+                <div class="img-box">
+                    <img src="assets/images/beach.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="img-box-text">
+                        <h2>####</h2>
+                        <p class="place-types">
+                            <span>Temple</span>
+                            <span>Moderate</span>
+                            <span>Sunrise</span>
+                        </p>
+                    </div>
+                </div>
 
-            <!-- Include the Multi Select JS class -->
-            <script src="MultiSelect.js"></script>
-            <script>
-                // Initialize the Dynamic Select
-                const visitingTime = new MultiSelect('#visiting-time-filter', {
-                    data: [
-                        {
-                            value: 'timeOfDay',
-                            html: '<strong>Time of day</strong>'
-                        },
-                        {
-                            value: 'opt1',
-                            text: 'Sunrise'
-                        },
-                        {
-                            value: 'opt2',
-                            text: 'Morning',
-                        },
-                        {
-                            value: 'opt3',
-                            text: 'Afternoon'
-                        },
-                        {
-                            value: 'opt4',
-                            text: 'Sunset'
-                        },
-                        {
-                            value: 'opt5',
-                            text: 'Evening'
-                        },
-                        {
-                            value: 'Season',
-                            html: '<strong>Season</strong>'
-                        },
-                        {
-                            value: 'opt6',
-                            text: 'Dry season'
-                        },
-                        {
-                            value: 'opt7',
-                            text: 'Rainy season'
-                        },
-                        {
-                            value: 'opt8',
-                            text: 'Year-round'
-                        },
-                    ],
-                    placeholder: 'Select Visiting Time',
-                    search: false,        // No search bar
-                    selectAll: false,     // No "Select all" option
-                    listAll: false,
-                    onChange: function (value, text, element) {
-                        console.log('Change:', value, text, element);
-                    }
-                });
+                <div class="place-card-text">
+                    <h1>#####</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus corporis quisquam hic
+                        sed odio non obcaecati adipisci nobis error, voluptatibus laboriosam incidunt? Eaque velit
+                        repudiandae cum cumque! Minus, recusandae.</p>
+                    <div class="tour-meta">
+                        <span class="rating">
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                        </span>
+                        <button>View Detial</button>
+                    </div>
+                </div>
+            </div>
 
-                // Override the _updateHeader method
-                visitingTime._updateHeader = function () {
-                    this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+            <!--Card 1-->
+            <div class="place-card">
+                <div class="img-box">
+                    <img src="assets/images/beach.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="img-box-text">
+                        <h2>####</h2>
+                        <p class="place-types">
+                            <span>Temple</span>
+                            <span>Moderate</span>
+                            <span>Sunrise</span>
+                        </p>
+                    </div>
+                </div>
 
-                    if (this.selectedValues.length > 0) {
-                        if (this.selectedValues.length <= 4) {
-                            this.selectedItems.forEach(item => {
-                                const el = document.createElement('span');
-                                el.className = 'multi-select-header-option';
-                                el.dataset.value = item.value;
-                                el.innerHTML = item.text;
-                                this.element.querySelector('.multi-select-header').prepend(el);
-                            });
-                        } else {
-                            this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
-                        }
-                    } else {
-                        this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
-                    }
+                <div class="place-card-text">
+                    <h1>#####</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus corporis quisquam hic
+                        sed odio non obcaecati adipisci nobis error, voluptatibus laboriosam incidunt? Eaque velit
+                        repudiandae cum cumque! Minus, recusandae. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Totam cumque ullam magni necessitatibus laborum, soluta voluptatum dicta iste, quas facere
+                        veniam laudantium accusantium iusto aut laboriosam labore, eligendi doloremque aliquam.</p>
+                    <div class="tour-meta">
+                        <span class="rating">
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                        </span>
+                        <button>View Detial</button>
+                    </div>
+                </div>
+            </div>
 
-                    if (this.options.max) {
-                        this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
-                    }
-                };
-            </script>
+            <!--Card 1-->
+            <div class="place-card">
+                <div class="img-box">
+                    <img src="assets/images/beach.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="img-box-text">
+                        <h2>####</h2>
+                        <p class="place-types">
+                            <span>Temple</span>
+                            <span>Moderate</span>
+                            <span>Sunrise</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="place-card-text">
+                    <h1>#####</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus corporis quisquam hic
+                        sed odio non obcaecati adipisci nobis error, voluptatibus laboriosam incidunt? Eaque velit
+                        repudiandae cum cumque! Minus, recusandae. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Totam cumque ullam magni necessitatibus laborum, soluta voluptatum dicta iste, quas facere
+                        veniam laudantium accusantium iusto aut laboriosam labore, eligendi doloremque aliquam.</p>
+                    <div class="tour-meta">
+                        <span class="rating">
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                        </span>
+                        <button>View Detial</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 1-->
+            <div class="place-card">
+                <div class="img-box">
+                    <img src="assets/images/beach.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="img-box-text">
+                        <h2>####</h2>
+                        <p class="place-types">
+                            <span>Temple</span>
+                            <span>Moderate</span>
+                            <span>Sunrise</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="place-card-text">
+                    <h1>#####</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus corporis quisquam hic
+                        sed odio non obcaecati adipisci nobis error, voluptatibus laboriosam incidunt? Eaque velit
+                        repudiandae cum cumque! Minus, recusandae. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Totam cumque ullam magni necessitatibus laborum, soluta voluptatum dicta iste, quas facere
+                        veniam laudantium accusantium iusto aut laboriosam labore, eligendi doloremque aliquam.</p>
+                    <div class="tour-meta">
+                        <span class="rating">
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="empty">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                        </span>
+                        <button>View Detial</button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-
-        <div class="filter-actions">
-            <button class="btn-clear">Clear Filters</button>
-            <button class="btn-apply">Apply Filters</button>
+    <!-- Amazing Banner Section -->
+    <section class="amazing-banner">
+        <div class="banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h2 class="banner-heading">
+                        Let's Make Your Next <br>
+                        Holiday Amazing
+                    </h2>
+                    <div class="banner-underline"></div>
+                    <p class="banner-subtext">Discover the wonders of Cambodia with us</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Load MultiSelect.js once -->
-    <script src="MultiSelect.js"></script>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-box">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="KnowMore">
+                    </a>
+                    <p>Discover the Kingdom of Wonder with unforgettable experiences across Cambodia</p>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
 
+                <div class="footer-box">
+                    <h3>Company</h3>
+                    <a href="index.html">Home</a>
+                    <a href="destination.html">Destination</a>
+                    <a href="about.html">About</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-box">
+                    <h3>Popular Destinations</h3>
+                    <a href="#">Angkor Wat</a>
+                    <a href="#">Phnom Penh</a>
+                    <a href="#">Siem Reap</a>
+                    <a href="#">Sihanoukville</a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2026 KnowMore Cambodia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!--=================================== JS =========================================================-->
     <script>
-        // ========== REGION FILTER ==========
-        const regionFilter = new MultiSelect('#region-filter', {
-            placeholder: 'Select regions',
-            search: false,
-            selectAll: true,
-            listAll: false,
-            onChange: function (value, text, element) {
-                console.log('Selected regions:', this.selectedValues);
+        // Get all filter buttons
+        const filterBtns = document.querySelectorAll('[data-dropdown]');
+        const closeOverlay = document.getElementById('closeOverlay');
+        const clearAllBtn = document.getElementById('clearAll');
+        const applyFiltersBtn = document.getElementById('applyFilters');
+        let currentOpenDropdown = null;
+
+        // Toggle dropdown
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const dropdownId = btn.dataset.dropdown + 'Dropdown';
+                const dropdown = document.getElementById(dropdownId);
+                const arrow = btn.querySelector('.filter-arrow');
+
+                // Close current dropdown if clicking the same button
+                if (currentOpenDropdown === dropdown) {
+                    closeDropdown(dropdown, arrow);
+                    currentOpenDropdown = null;
+                } else {
+                    // Close any open dropdown
+                    if (currentOpenDropdown) {
+                        const currentArrow = currentOpenDropdown.previousElementSibling.querySelector('.filter-arrow');
+                        closeDropdown(currentOpenDropdown, currentArrow);
+                    }
+                    // Open new dropdown
+                    openDropdown(dropdown, arrow);
+                    currentOpenDropdown = dropdown;
+                }
+            });
+        });
+
+        function openDropdown(dropdown, arrow) {
+            dropdown.classList.add('active');
+            arrow.classList.add('rotated');
+            closeOverlay.classList.add('active');
+        }
+
+        function closeDropdown(dropdown, arrow) {
+            dropdown.classList.remove('active');
+            arrow.classList.remove('rotated');
+            closeOverlay.classList.remove('active');
+        }
+
+        // Close dropdown when clicking overlay
+        closeOverlay.addEventListener('click', () => {
+            if (currentOpenDropdown) {
+                const arrow = currentOpenDropdown.previousElementSibling.querySelector('.filter-arrow');
+                closeDropdown(currentOpenDropdown, arrow);
+                currentOpenDropdown = null;
             }
         });
 
-        regionFilter._updateHeader = function () {
-            this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+        // Update selected count for each filter
+        function updateCount(filterType) {
+            const checkboxes = document.querySelectorAll(`[data-filter-type="${filterType}"]`);
+            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const dropdown = document.getElementById(filterType + 'Dropdown');
+            const countSpan = dropdown.querySelector('.selected-count');
+            countSpan.textContent = checkedCount;
+        }
 
-            if (this.selectedValues.length > 0) {
-                if (this.selectedValues.length <= 4) {
-                    this.selectedItems.forEach(item => {
-                        const el = document.createElement('span');
-                        el.className = 'multi-select-header-option';
-                        el.dataset.value = item.value;
-                        el.innerHTML = item.text;
-                        this.element.querySelector('.multi-select-header').prepend(el);
-                    });
-                } else {
-                    this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
-                }
-            } else {
-                this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
-            }
-
-            if (this.options.max) {
-                this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
-            }
-        };
-
-        // ========== PLACE TYPE FILTER ==========
-        const placeFilter = new MultiSelect('#place-filter', {
-            placeholder: 'Select places',
-            search: false,
-            selectAll: true,
-            listAll: false,
-            onChange: function (value, text, element) {
-                console.log('Selected places:', this.selectedValues);
-            }
+        // Add change event to all checkboxes
+        const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-filter-type]');
+        allCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                updateCount(checkbox.dataset.filterType);
+            });
         });
 
-        placeFilter._updateHeader = function () {
-            this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+        // Select All functionality
+        const selectAllBtns = document.querySelectorAll('[data-select-all]');
+        selectAllBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const filterType = btn.dataset.selectAll;
+                const checkboxes = document.querySelectorAll(`[data-filter-type="${filterType}"]`);
+                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
 
-            if (this.selectedValues.length > 0) {
-                if (this.selectedValues.length <= 4) {
-                    this.selectedItems.forEach(item => {
-                        const el = document.createElement('span');
-                        el.className = 'multi-select-header-option';
-                        el.dataset.value = item.value;
-                        el.innerHTML = item.text;
-                        this.element.querySelector('.multi-select-header').prepend(el);
-                    });
-                } else {
-                    this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
-                }
-            } else {
-                this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
-            }
-
-            if (this.options.max) {
-                this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
-            }
-        };
-
-        // ========== ACCESSIBILITY FILTER ==========
-        const accessibilityFilter = new MultiSelect('#accessibility-filter', {
-            placeholder: 'Select accessibility',
-            search: false,
-            selectAll: true,
-            listAll: false,
-            onChange: function (value, text, element) {
-                console.log('Selected accessibilities:', this.selectedValues);
-            }
+                // Toggle: if all are checked, uncheck all; otherwise check all
+                checkboxes.forEach(cb => cb.checked = !allChecked);
+                updateCount(filterType);
+            });
         });
 
-        accessibilityFilter._updateHeader = function () {
-            this.element.querySelectorAll('.multi-select-header-option, .multi-select-header-placeholder').forEach(el => el.remove());
+        // Reset individual filter
+        const resetBtns = document.querySelectorAll('[data-reset]');
+        resetBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const filterType = btn.dataset.reset;
+                const checkboxes = document.querySelectorAll(`[data-filter-type="${filterType}"]`);
+                checkboxes.forEach(cb => cb.checked = false);
+                updateCount(filterType);
+            });
+        });
 
-            if (this.selectedValues.length > 0) {
-                if (this.selectedValues.length <= 4) {
-                    this.selectedItems.forEach(item => {
-                        const el = document.createElement('span');
-                        el.className = 'multi-select-header-option';
-                        el.dataset.value = item.value;
-                        el.innerHTML = item.text;
-                        this.element.querySelector('.multi-select-header').prepend(el);
-                    });
-                } else {
-                    this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+        // Clear all filters
+        clearAllBtn.addEventListener('click', () => {
+            allCheckboxes.forEach(cb => cb.checked = false);
+            ['region', 'place', 'accessibility', 'time'].forEach(type => updateCount(type));
+        });
+
+        // Apply filters
+        applyFiltersBtn.addEventListener('click', () => {
+            const selectedFilters = {
+                region: [],
+                place: [],
+                accessibility: [],
+                time: []
+            };
+
+            allCheckboxes.forEach(cb => {
+                if (cb.checked) {
+                    const type = cb.dataset.filterType;
+                    const label = cb.parentElement.querySelector('span').textContent;
+                    selectedFilters[type].push(label);
                 }
-            } else {
-                this.element.querySelector('.multi-select-header').insertAdjacentHTML('beforeend', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
-            }
+            });
 
-            if (this.options.max) {
-                this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
-            }
-        };
+            console.log('Applied Filters:', selectedFilters);
+            alert('Filters applied! Check console for details.');
+        });
     </script>
 
 </body>

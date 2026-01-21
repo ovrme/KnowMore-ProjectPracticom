@@ -1015,3 +1015,468 @@ body {
     padding: 18px 60px;
     font-size: 18px;
 }
+
+/*===================== Filter Section =====================*/
+.filter-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+.filter-container {
+    background: rgba(77, 78, 84, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0px auto;
+}
+
+/* Top Row: Title and View Icons */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.header h2 {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.view-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-btn:hover {
+    background-color: #e5e7eb;
+}
+
+.view-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #4b5563;
+}
+
+/* Filter Dropdowns Container */
+.filters-container {
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+.filter-wrapper {
+    position: relative;
+}
+
+/* Filter Button */
+.filter-btn {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.filter-arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.2s;
+}
+
+.filter-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Panel */
+.filter-dropdown-panel {
+    position: absolute;
+    top: 100%;
+    margin-top: 0.5rem;
+    width: 20rem;
+    background: rgba(77, 78, 84, 0.95);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 50;
+    display: none;
+}
+
+.filter-dropdown-panel.active {
+    display: block;
+}
+
+/* Dropdown Header */
+.dropdown-header {
+    padding: 1rem;
+    border-bottom: 1px solid #505053;
+    /*=======*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dropdown-header span {
+    color: #d1d5db;
+    font-size: 0.875rem;
+}
+
+.select-all-btn {
+    color: #09C6AB;
+    font-size: 0.875rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.select-all-btn:hover {
+    color: #fff;
+}
+
+.reset-btn {
+    color: #09C6AB;
+    font-size: 0.875rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.reset-btn:hover {
+    color: #fff;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    max-height: 16rem;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background: #505053;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: #a0a5ab;
+    border-radius: 4px;
+}
+
+/* Checkbox Labels */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkbox-label:hover {
+    background-color: #475569;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.section-header {
+    padding: 0.5rem 0.75rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.section-header:first-child {
+    margin-top: 0;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.action-btn {
+    background: #09C6AB;
+    border: 2px solid #09C6AB;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 525;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /*box-shadow: 0 4px 15px rgba(9, 198, 171, 0.4);*/
+    display: inline-block;
+}
+
+.clear-btn {
+    border: 2px solid #fff;
+    background-color: white;
+    color: #374151;
+}
+
+.clear-btn:hover {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/*.apply-btn {
+    background-color: #4b5563;
+    color: white;
+}*/
+
+.apply-btn:hover {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Close overlay */
+.close-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+}
+
+.close-overlay.active {
+    display: block;
+}
+
+
+/*#################### Destination Card ############################# */
+
+.destination-card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.card-main-container {
+    margin: 4rem auto;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.place-card {
+    /*background-color: hsl(198deg, 50%, 10%);
+    border-radius: 10px;*/
+    overflow: hidden;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+        rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+        rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;*/
+    transition: transform 350ms ease-in-out;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.img-box {
+    cursor: pointer;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.img-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 500ms ease-in-out;
+}
+
+.place-card:hover .img-box img {
+    transform: scale(1.05);
+}
+
+.img-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.8));
+    width: 100%;
+    height: 100%;
+}
+
+.img-box-text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+}
+
+.img-box-text h2 {
+    font-size: 1.5rem;
+    color: hsl(0deg, 0%, 100%);
+    margin-bottom: 0.5rem;
+}
+
+.place-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+.place-types span {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    background-color: hsla(167deg, 82%, 65%, 0.2);
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.place-card-text {
+    margin-top: 0.5rem;
+    color: hsl(0, 0%, 99%);
+    flex: 1;
+    /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card-text h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    /*cursor: pointer;*/
+    transition: color 350ms ease-in-out;
+    color: #fff;
+}
+
+/*
+.place-card-text h1:hover {
+    color: hsl(165, 11%, 34%);
+} */
+
+.place-card-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 80%;
+    margin-bottom: 1rem;
+    color: #fff;
+    /* Limit to 3 lines with ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tour-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid hsla(0, 5%, 96%, 0.838);
+}
+
+.tour-meta span {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.tour-meta button {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 350ms ease-in-out;
+}
+
+.tour-meta button:hover {
+    color: hsl(167deg, 61%, 45%);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.stars svg {
+    width: 30px;
+    height: 30px;
+    color: hsl(0, 0%, 100%);
+    /* Gold filled */
+}
+
+.stars svg.empty {
+    color: hsl(0deg, 0%, 75%);
+    /* Gray empty */
+}
