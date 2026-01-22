@@ -1,0 +1,187 @@
+<!-- Local Guides Network Section -->
+<section class="local-guides">
+    <div class="container">
+        <div class="section-header-row">
+            <div class="section-header-left">
+                <h2>LOCAL GUIDES NETWORK</h2>
+                <p>Connect with verified local experts</p>
+            </div>
+            <a href="#" class="view-all-link">View All Guides →</a>
+        </div>
+
+        <div class="guides-grid">
+            <!-- Guide Card 1 -->
+            <div class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Sokha Phan">
+                        <span class="verified-badge" title="Verified Guide">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="guide-info">
+                        <h4>Sokha Phan</h4>
+                        <span class="guide-location"><i class="fa-solid fa-location-dot"></i> Mondulkiri</span>
+                        <div class="guide-rating">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-count">(47 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-languages">
+                        <span class="lang-label">Languages:</span>
+                        <div class="lang-tags">
+                            <span class="lang-tag">English</span>
+                            <span class="lang-tag">Khmer</span>
+                            <span class="lang-tag">French</span>
+                        </div>
+                    </div>
+                    <div class="guide-specialties">
+                        <span class="specialty-label">Specialties:</span>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag"><i class="fa-solid fa-mountain"></i> Hiking</span>
+                            <span class="specialty-tag"><i class="fa-solid fa-paw"></i> Wildlife</span>
+                            <span class="specialty-tag"><i class="fa-solid fa-campground"></i> Camping</span>
+                        </div>
+                    </div>
+                    <p class="guide-bio">Expert in Mondulkiri's hidden waterfalls and elephant sanctuaries. 10+ years experience guiding eco-tours.</p>
+                </div>
+                <div class="guide-footer">
+                    <button class="btn-view-profile">View Profile</button>
+                    <button class="btn-contact-guide"><i class="fa-solid fa-message"></i></button>
+                </div>
+            </div>
+
+            <!-- Guide Card 2 -->
+            <div class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Vanna Chea">
+                        <span class="verified-badge" title="Verified Guide">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="guide-info">
+                        <h4>Vanna Chea</h4>
+                        <span class="guide-location"><i class="fa-solid fa-location-dot"></i> Ratanakiri</span>
+                        <div class="guide-rating">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <span class="review-count">(32 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-languages">
+                        <span class="lang-label">Languages:</span>
+                        <div class="lang-tags">
+                            <span class="lang-tag">English</span>
+                            <span class="lang-tag">Khmer</span>
+                        </div>
+                    </div>
+                    <div class="guide-specialties">
+                        <span class="specialty-label">Specialties:</span>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag"><i class="fa-solid fa-users"></i> Indigenous Culture</span>
+                            <span class="specialty-tag"><i class="fa-solid fa-water"></i> Waterfalls</span>
+                        </div>
+                    </div>
+                    <p class="guide-bio">Cultural expert connecting travelers with indigenous communities. Fluent in local dialects and traditions.</p>
+                </div>
+                <div class="guide-footer">
+                    <button class="btn-view-profile">View Profile</button>
+                    <button class="btn-contact-guide"><i class="fa-solid fa-message"></i></button>
+                </div>
+            </div>
+
+            <!-- Guide Card 3 -->
+            <div class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-avatar">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Dara Kim">
+                        <span class="verified-badge" title="Verified Guide">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="guide-info">
+                        <h4>Dara Kim</h4>
+                        <span class="guide-location"><i class="fa-solid fa-location-dot"></i> Koh Kong</span>
+                        <div class="guide-rating">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-count">(28 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-body">
+                    <div class="guide-languages">
+                        <span class="lang-label">Languages:</span>
+                        <div class="lang-tags">
+                            <span class="lang-tag">English</span>
+                            <span class="lang-tag">Khmer</span>
+                            <span class="lang-tag">German</span>
+                        </div>
+                    </div>
+                    <div class="guide-specialties">
+                        <span class="specialty-label">Specialties:</span>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag"><i class="fa-solid fa-tree"></i> Jungle Treks</span>
+                            <span class="specialty-tag"><i class="fa-solid fa-water"></i> Waterfalls</span>
+                            <span class="specialty-tag"><i class="fa-solid fa-umbrella-beach"></i> Beaches</span>
+                        </div>
+                    </div>
+                    <p class="guide-bio">Adventure guide specializing in Cardamom Mountains expeditions and secret beach discoveries.</p>
+                </div>
+                <div class="guide-footer">
+                    <button class="btn-view-profile">View Profile</button>
+                    <button class="btn-contact-guide"><i class="fa-solid fa-message"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="become-guide-cta">
+            <div class="cta-content">
+                <div class="cta-icon">🎒</div>
+                <div class="cta-text">
+                    <h4>Are you a local expert?</h4>
+                    <p>Join our network and help travelers discover hidden Cambodia</p>
+                </div>
+                <button class="btn-become-guide">Become a Guide</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!----> <!-- Amazing Banner Section -->
+    <section class="amazing-banner">
+        <div class="banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h2 class="banner-heading">
+                        Let's Make Your Next <br>
+                        Holiday Amazing
+                    </h2>
+                    <div class="banner-underline"></div>
+                    <p class="banner-subtext">Discover the wonders of Cambodia with us</p>
+                    <a href="#" class="btn-explore">Explore Now</a>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -4,61 +4,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Know More - Discover Cambodia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome 6 (Free) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/destination.css">
 </head>
 
 <body>
-    <div class="tour-card">
-        <img src="angkor.jpg" alt="Angkor Wat" class="tour-img">
-        <div class="tour-info">
-            <h3 class="tour-name">Angkor Wat</h3>
-            <p class="tour-desc">Ancient temple complex in Siem Reap.</p>
-            <div class="tour-meta">
-                <span>⭐ 4.8</span>
-                <span>Siem Reap</span>
+
+    <!--Navigation-->
+    <header class="top-area">
+        <div class="header-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-2">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo.png" alt="KnowMore">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10">
+                        <nav class="navbar navbar-expand-lg main-menu">
+                            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto align-items-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="destination.html">Destination</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="btn login-btn">Login</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="home-border"></div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <style>
-        .tour-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            width: 260px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+    <!--Hero Banner-->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About Us</h1>
+                <div class="hero-underline"></div>
+                <p>Discover the Kingdom of Wonder</p>
+            </div>
+        </div>
+    </section>
 
-        .tour-img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
+    <!--Who We Are Section-->
+    <section class="who-we-are">
+        <div class="container">
+            <div class="who-we-are-content">
+                <div class="who-we-are-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Our Story">
+                </div>
+                <div class="who-we-are-text">
+                    <h4>Who We Are</h4>
+                    <h2>Our Story</h2>
+                    <p>We are passionate travelers dedicated to sharing Cambodia's hidden gems with the world. Founded in 2020, KnowMore started as a small blog and has grown into a comprehensive travel resource.</p>
+                    <p>Our team of local experts and travel enthusiasts work together to bring you authentic experiences, insider tips, and carefully curated destinations across the Kingdom of Cambodia.</p>
+                    <a href="#" class="btn-learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .tour-info {
-            padding: 12px;
-        }
+    <!--Our Mission Section-->
+    <section class="our-mission">
+        <div class="container"> 
+            <div class="center-text">
+                <h2>Our Mission</h2>
+                <p>What drives us every day</p>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Explore</h3>
+                    <p>Discover new destinations and hidden gems across Cambodia that most tourists never see.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-earth-asia"></i>
+                    </div>
+                    <h3>Preserve</h3>
+                    <p>Protect and promote local culture, traditions, and sustainable tourism practices.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3>Connect</h3>
+                    <p>Build bridges between travelers and local communities for meaningful experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .tour-name {
-            font-size: 1.2rem;
-            margin-bottom: 6px;
-        }
+    <!--Our Vision Section-->
+    <section class="our-vision">
+        <div class="container">
+            <div class="our-vision-content">
+                <div class="our-vision-text">
+                    <h4>Our Vision</h4>
+                    <h2>Looking Forward</h2>
+                    <p>To become Cambodia's most trusted travel resource, connecting visitors with authentic experiences that benefit both travelers and local communities.</p>
+                    <p>We envision a future where sustainable tourism helps preserve Cambodia's rich heritage while providing economic opportunities for local people.</p>
+                </div>
+                <div class="our-vision-image">
+                    <img src="https://images.unsplash.com/photo-1484910292437-025e5d13ce87?q=80&w=1214&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Our Vision">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .tour-desc {
-            font-size: 0.9rem;
-            color: #555;
-        }
+    <!--Meet Our Team Section-->
+    <section class="our-team">
+        <div class="container">
+            <div class="center-text">
+                <h2>Meet Our Team</h2>
+                <p>The people behind KnowMore</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="assets/images/rom-img.jpg" alt="Sovann Chen">
+                    </div>
+                    <div class="team-info">
+                        <h3>Roeun Monorom</h3>
+                        <span>Student</span>
+                        <div class="team-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="assets/images/long-img.jpg" alt="Channary Kim">
+                    </div>
+                    <div class="team-info">
+                        <h3>Young Soklong</h3>
+                        <span>Student</span>
+                        <div class="team-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="assets/images/roth-img.jpg" alt="Veasna Phan">
+                    </div>
+                    <div class="team-info">
+                        <h3>Rin Monyroth</h3>
+                        <span>Student</span>
+                        <div class="team-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .tour-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85rem;
-            margin-top: 8px;
-            color: #333;
-        }
-    </style>
+    <!--Why Choose Us Section-->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="center-text">
+                <h2>Why Choose Us</h2>
+                <p>Numbers that speak for themselves</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>500+</h3>
+                    <p>Places</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+                    <h3>25</h3>
+                    <p>Provinces</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3>10K+</h3>
+                    <p>Reviews</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>100%</h3>
+                    <p>Secure</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-box">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="KnowMore">
+                    </a>
+                    <p>Discover the Kingdom of Wonder with unforgettable experiences across Cambodia</p>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
 
+                <div class="footer-box">
+                    <h3>Company</h3>
+                    <a href="index.html">Home</a>
+                    <a href="destination.html">Destination</a>
+                    <a href="about.html">About</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-box">
+                    <h3>Popular Destinations</h3>
+                    <a href="#">Angkor Wat</a>
+                    <a href="#">Phnom Penh</a>
+                    <a href="#">Siem Reap</a>
+                    <a href="#">Sihanoukville</a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2026 KnowMore Cambodia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

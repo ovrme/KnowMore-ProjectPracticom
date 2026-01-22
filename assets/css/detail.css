@@ -1,0 +1,764 @@
+/* =================================
+   DETAIL PAGE STYLES
+   ================================= */
+
+/* Hero Section */
+.detail-hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.detail-hero .hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.8));
+}
+
+.detail-hero .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.detail-hero .hero-content {
+    padding-bottom: 40px;
+}
+
+.detail-hero .hero-location {
+    display: inline-block;
+    background: rgba(9, 198, 171, 0.2);
+    color: #09C6AB;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.detail-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.detail-hero .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.detail-hero .hero-meta .rating i {
+    color: #ffc107;
+}
+
+.detail-hero .hero-meta .rating span {
+    color: #fff;
+    margin-left: 5px;
+}
+
+.detail-hero .hero-meta .divider {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Main Content Layout */
+.detail-content {
+    padding: 60px 0;
+}
+
+.detail-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    align-items: start;
+}
+
+.detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Quick Info Cards */
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(9, 198, 171, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icon i {
+    font-size: 1.2rem;
+    color: #09C6AB;
+}
+
+.info-text span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.info-text h4 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section Styles */
+.detail-section h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* About Section */
+.about-text p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.about-text .hidden-text {
+    display: none;
+}
+
+.about-text.expanded .hidden-text {
+    display: block;
+}
+
+.btn-read-more {
+    background: transparent;
+    border: none;
+    color: #09C6AB;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-read-more:hover {
+    color: #fff;
+}
+
+/* Photo Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-main img:hover {
+    transform: scale(1.02);
+}
+
+.gallery-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-more .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gallery-more .gallery-overlay span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Highlights */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.highlight-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    background: rgba(9, 198, 171, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-icon i {
+    font-size: 1.5rem;
+    color: #09C6AB;
+}
+
+.highlight-card h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.highlight-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Map Section */
+.map-container {
+    margin-bottom: 20px;
+}
+
+.map-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.map-info p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.map-info p i {
+    color: #09C6AB;
+    margin-right: 8px;
+}
+
+.btn-directions {
+    color: #09C6AB;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-directions:hover {
+    color: #fff;
+}
+
+/* Transport Grid */
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.transport-card {
+    text-align: center;
+    padding: 25px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.transport-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.transport-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px auto;
+    background: rgba(9, 198, 171, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transport-icon i {
+    font-size: 1.2rem;
+    color: #09C6AB;
+}
+
+.transport-card h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.transport-price {
+    color: #09C6AB;
+    font-weight: 600;
+    margin-bottom: 5px !important;
+}
+
+.transport-time {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    margin: 0 !important;
+}
+
+/* Tips Box */
+.tips-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 25px 30px;
+}
+
+.tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips-list li {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tips-list li:last-child {
+    border-bottom: none;
+}
+
+.tips-list li i {
+    color: #09C6AB;
+    font-size: 14px;
+}
+
+/* Reviews */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.reviewer-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-info {
+    flex: 1;
+}
+
+.reviewer-info h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0 3px 0;
+}
+
+.reviewer-info span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+}
+
+.review-rating i {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.review-content p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.review-footer {
+    margin-top: 15px;
+}
+
+.btn-helpful {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-helpful:hover {
+    border-color: #09C6AB;
+    color: #09C6AB;
+}
+
+.btn-write-review {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid #09C6AB;
+    color: #09C6AB;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-write-review:hover {
+    background: #09C6AB;
+    color: #fff;
+}
+
+/* Sidebar - Booking Card */
+.detail-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.booking-header {
+    background: rgba(9, 198, 171, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.price-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.price .amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.price .per {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.booking-body {
+    padding: 25px;
+}
+
+.booking-field {
+    margin-bottom: 20px;
+}
+
+.booking-field label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.booking-field label i {
+    margin-right: 8px;
+    color: #09C6AB;
+}
+
+.booking-field .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #767676;
+    font-size: 14px;
+}
+
+.booking-field .form-control:focus {
+    outline: none;
+    border-color: #09C6AB;
+}
+
+.booking-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.booking-total span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.booking-total .total-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.btn-book-now {
+    width: 100%;
+    padding: 15px;
+    background: #09C6AB;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn-book-now:hover {
+    background: #08b39a;
+}
+
+.btn-wishlist {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-wishlist:hover {
+    border-color: #09C6AB;
+    color: #09C6AB;
+}
+
+/* Share Box */
+.share-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.share-box h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.share-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.share-btn.facebook {
+    background: #3b5998;
+}
+
+.share-btn.twitter {
+    background: #1da1f2;
+}
+
+.share-btn.whatsapp {
+    background: #25d366;
+}
+
+.share-btn.copy {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.share-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Nearby Places */
+.nearby-places {
+    padding: 60px 0;
+    background: rgba(77, 78, 84, 0.3);
+}
+
+.nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.nearby-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.nearby-card:hover {
+    transform: translateY(-5px);
+}
+
+.nearby-image {
+    position: relative;
+    height: 200px;
+}
+
+.nearby-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.distance-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+.nearby-info {
+    padding: 20px;
+}
+
+.nearby-info h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.nearby-info p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.nearby-info p i {
+    color: #09C6AB;
+    margin-right: 5px;
+}
+
+.nearby-rating i {
+    color: #ffc107;
+    font-size: 12px;
+}
+
+.nearby-rating span {
+    color: #fff;
+    margin-left: 5px;
+    font-size: 14px;
+}
